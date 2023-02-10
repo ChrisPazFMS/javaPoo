@@ -1,0 +1,8 @@
+# ignore bin
+TestPerson/bin/
+javaPoo/bin/
+
+# ignore settings
+javaPoo/.settings/
+TestPerson/.settings/
+
