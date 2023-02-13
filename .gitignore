@@ -1,8 +1,8 @@
 # ignore bin
-TestPerson/bin/
+TestPerson1.8/bin/
 javaPoo/bin/
 
 # ignore settings
 javaPoo/.settings/
-TestPerson/.settings/
+TestPerson1.8/.settings/
 

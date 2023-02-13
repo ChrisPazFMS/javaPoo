@@ -1,9 +1,8 @@
-
 public class Person {
-	
+
 	/**
-	 * En cours!
-	 * Exercice Poo 1.8
+	 * Accompli ! Exercice Poo 1.8
+	 * 
 	 * @param args
 	 */
 
@@ -11,7 +10,16 @@ public class Person {
 	public String firstName;
 	public int age;
 	public String address;
+	private City city;
 
+	public Person(String lastName, String firstName, int age, String address, City city) {
+		this.lastName = lastName;
+		this.firstName = firstName;
+		this.age = age;
+		this.address = address;
+		this.city = new City(city.country, city.city);
+	}
+	
 	public Person(String lastName, String firstName, int age, String address) {
 		this.lastName = lastName;
 		this.firstName = firstName;
@@ -23,14 +31,15 @@ public class Person {
 		this.lastName = lastName;
 		this.firstName = firstName;
 		this.age = age;
+		this.address = "Unknow";
 	}
 
 	public Person(String lastName, String firstName) {
 		this.lastName = lastName;
 		this.firstName = firstName;
+		this.age = 0;
+		this.address = "Unknow";
 	}
-	
-	
 
 	public String getLastName() {
 		return lastName;
@@ -61,17 +70,25 @@ public class Person {
 	}
 
 	public void setAddress(String address) {
-		if(address == null) {
-			this.address = "unknow";
-		}else {
-			
+
 		this.address = address;
-		}
+
 	}
 
+	
+
+	@Override
 	public String toString() {
 		return "Person [lastName=" + lastName + ", firstName=" + firstName + ", age=" + age + ", address=" + address
-				+ "]";
+				+ ", city=" + city + "]";
+	}
+
+	public City getCity() {
+		return city;
+	}
+
+	public void setCity(City city) {
+		this.city = city;
 	}
 
 }
